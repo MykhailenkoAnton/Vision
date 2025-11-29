@@ -29,15 +29,12 @@ jobs:
 
     - name: Build
       run: cmake --build ${{github.workspace}}/build --config ${{matrix.configuration}} -v --target ${{env.TARGETS}}
-
-    - name: Archive Atrifacts
-      run: Compress-Archive -Path build/bin/* -DestinationPath artifacts-${{matrix.configuration}}.zip
-
+      
     - name: Upload Atrifacts
       uses: actions/upload-artifact@v4
       with:
         name: artifacts-${{matrix.configuration}}
-        path: artifacts-${{matrix.configuration}}.zip
+        path: build/bin/*
 
 
 
