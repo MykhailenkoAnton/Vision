@@ -1,0 +1,5 @@
+#pragma once
+#define Engine_VERSION_MAJOR @VisionEngine_VERSION_MAJOR@
+#define Engine_VERSION_MINOR @VisionEngine_VERSION_MINOR@
+#define Engine_VERSION_PATCH @VisionEngine_VERSION_PATCH@
+#define Engine_VERSION_STRING "@VisionEngine_VERSION@"

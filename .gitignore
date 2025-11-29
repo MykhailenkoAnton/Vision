@@ -1,0 +1,9 @@
+#
+build/
+.vscode/
+
+#
+CMakeUserPresets.json
+
+#
+EngineConfig.h
