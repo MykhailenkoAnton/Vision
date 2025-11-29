@@ -28,7 +28,7 @@ class Config:
     FRESH = True
     CLEAN = True
     VERBOSE = False
-    SOURCE_DIR = "Engine/Source"
+    SOURCE_DIR = "Engine"
 
 FRESH_ARG = "--fresh" if Config.FRESH else ""
 CLEAN_ARG = "--clean-first" if Config.CLEAN else ""
