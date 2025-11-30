@@ -1,10 +1,16 @@
 #include "Engine.h"
-#include <iostream>
+#include "Log/Log.h"
+#include <format>
 
 namespace Vision
 {
     Engine::Engine()
     {
-        std::cout << "Hello from Vision Engine! Version: " << version() << std::endl;
+        Log::getInstance().log(Vision::LogVerbosity::Display, std::format("Hello from Vision Engine! Version: {}", version()));
+
+        Log::getInstance().log(Vision::LogVerbosity::NoLogging, "NoLogging example log");
+        Log::getInstance().log(Vision::LogVerbosity::Warning, "Warning example log");
+        Log::getInstance().log(Vision::LogVerbosity::Error, "Error example log");
+        Log::getInstance().log(Vision::LogVerbosity::Fatal, "Critical example log");
     }
 }  // namespace Vision
