@@ -14,4 +14,12 @@ namespace Vision
         NoCopyable(NoCopyable&&) = delete;
         NoCopyable& operator=(NoCopyable&&) = delete;
     };
+
 }  // namespace Vision
+
+#if defined(_MSC_VER)
+#define PLATFORM_BREAK() __debugbreak()
+#else
+#include <signal.h>
+#define PLATFORM_BREAK() raise(SIGTRAP)
+#endif
